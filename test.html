@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Test page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            header {
+                width: 100%;
+                height: 3.6em;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #eb731c;
+            }
+            header p {
+                margin-top: 1.2em;
+                margin-bottom: 1.2em;
+                text-align: center;
+                font-size: 1.2em;
+                font-family: '나눔고딕', Arial, sans-serif;
+                font-weight: bold;
+            }
+            @media (max-width:600px) {
+                /* 작은 화면 */
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 3em;
+                }
+                .albumart {
+                    width: 100%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    margin-top: 20px;
+                }
+                .albumart img {
+                    display: block;
+                    margin: auto;
+                    width: 100%;
+                    max-width: 300px;
+                }
+                .lyrics {
+                    width: 100%;
+                    margin-top: 20px;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                }
+                .lyrics p {
+                    text-align: center;
+                    font-size: 1em;
+                    font-family: '나눔고딕', Arial, sans-serif;
+                    /* line-height: 1.6em; */
+                }
+                .lyrics br {
+                    line-height: 1.6em;
+                }
+            }
+            @media (min-width:601px) {
+                /* 큰 화면 */
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 3em;
+                    width: 100%;
+                    max-width: 900px;
+                    margin: auto;
+                }
+                .albumart {
+                    width: 40%;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                }
+                .albumart img {
+                    display: block;
+                    /*여기에 position: relative를 주면 header보다 위로 출력됨*/
+                    position: relative;
+                    top: 50%;
+                    left: 0;
+                    z-index: -1;
+                    transform: translateY(-50%);
+                    width: 100%;
+                }
+                .lyrics {
+                    width: 60%;
+                    padding-left: 3%;
+                    padding-right: 2%;
+                }
+                .lyrics p {
+                    text-align: center;
+                    font-size: 1em;
+                    font-family: '나눔고딕', Arial, sans-serif;
+                    letter-spacing: 1px;
+                    /* line-height: 1.6em; */
+                }
+                .lyrics br {
+                    line-height: 1.4em;
+                }
+            }
+        </style>
+    </head>
+    <header>
+        <p>김동완 - 헤어지긴 한 걸까</p>
+    </header>
+    <body>
+        <article>
+            <div class="content">
+                <div class="albumart">
+                    <img src="./album_kimdongwan.jpg" />
+                </div>
+                <div class="lyrics">
+                    <p>
+                        늦게 일어나 아침을 거르면<br />
+                        몸 좀 챙기란 네가 들리고<br />
+                        텅 빈 소파에 앉아 TV를 켜보면<br />
+                        내게 기댄 네가 보여<br />
+                        <br />
+                        홀로 길을 걷다 보면<br />
+                        손 흔드는 너를 만나<br />
+                        왜 이제 왔냐며 날 안아줄 듯이<br />
+                        아픈 추억이 나를 불러<br />
+                        <br />
+                        우리가 헤어지긴 한 걸까<br />
+                        어딜 가봐도 네 기억이 끊이지 않아<br />
+                        한참을 떼어내도 그때의 너와<br />
+                        다 헤어지지 못한 나야<br />
+                        <br />
+                        가끔 비가 내릴 때면<br />
+                        떨고 있을 네가 걸려<br />
+                        손끝이 차다며 꼭 잡아달라던<br />
+                        네가 앞에 있는 것 같아<br />
+                        <br />
+                        우리가 헤어지긴 한 걸까<br />
+                        어딜 가봐도 네 기억이 끊이지 않아<br />
+                        한참을 떼어내도 그때의 너와<br />
+                        다 헤어지지 못한 나야<br />
+                        <br />
+                        너로 시작해 너로 끝나는<br />
+                        내 하루를 넌 알까...<br />
+                        <br />
+                        하루만 헤어질 수 있다면<br />
+                        단 하루만 널 떼어내고 살 수 있다면<br />
+                        한참을 보란 듯이 널 잊어봐도<br />
+                        널 닮은 추억들이 날 따라와서<br />
+                        너 없인 안 되는 날 울려
+                    </p>
+                </div>
+            </div>
+        </article>
+    </body>
+    <footer>
+
+    </footer>
+</html>
